@@ -1,0 +1,199 @@
+https://thegraph.academy/developers/local-development/
+https://docs.harmony.one/home/developers/web3-foundations/tutorials/the-graph-subgraphs/building-and-deploying-subgraph-local-node
+https://docs.thegraph.academy/official-docs/indexer/testnet/graph-protocol-testnet-baremetal/3_deployandconfiguregraphnode
+
+http://135.181.43.18:8030/graphql/playground
+
+
+
+
+https://thegraph.com/docs/en/operating-graph-node/
+sudo apt-get install -y clang libpg-dev libssl-dev pkg-config
+
+
+
+
+
+
+
+
+-----------------------------
+https://thegraph.com/docs/en/operating-graph-node/
+
+sudo apt-get install -y clang libpg-dev libssl-dev pkg-config
+
+
+
+https://docs.thegraph.academy/official-docs/indexer/testnet/graph-protocol-testnet-baremetal/3_deployandconfiguregraphnode
+
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh Git - sudo apt install git
+
+apt-get install -y clang libpq-dev libssl-dev pkg-config build-essential
+
+
+https://github.com/graphprotocol/graph-node/
+
+
+git clone https://github.com/graphprotocol/graph-node
+
+cd ./graph-node
+
+git checkout v0.21.1
+
+cargo build --release
+
+
+
+
+
+
+
+-----------------------------------------------
+https://github.com/graphprotocol/graph-node/
+-----------------------------------------------
+
+https://www.digitalocean.com/community/tutorials/install-rust-on-ubuntu-linux
+
+curl --proto '=https' --tlsv1.3 https://sh.rustup.rs -sSf | sh
+source $HOME/.cargo/env
+rustc --version
+sudo apt update
+sudo apt upgrade
+sudo apt install build-essential
+
+
+
+https://www.postgresql.org/download/linux/ubuntu/
+
+sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+sudo apt-get update
+sudo apt-get -y install postgresql
+
+
+
+https://docs.ipfs.tech/install/command-line/#install-kubo-linux
+
+wget https://dist.ipfs.tech/kubo/v0.19.0/kubo_v0.19.0_linux-amd64.tar.gz
+tar -xvzf kubo_v0.19.0_linux-amd64.tar.gz
+cd kubo
+sudo bash install.sh
+
+
+
+
+https://grpc.io/docs/protoc-installation/
+
+sudo apt install -y protobuf-compiler
+
+
+sudo service postgresql start
+sudo service postgresql restart
+
+createdb graph-node
+
+sudo su -l postgres
+
+psql
+\l
+\du 
+
+CREATE ROLE aced WITH SUPERUSER LOGIN CREATEDB CREATEROLE LOGIN ENCRYPTED PASSWORD '123';
+createuser --interaction --superuser --login --createdb --createrole aced --password
+
+createdb -O aced -E UTF8 -T template0 -l C graph-node1
+
+peer t- md5
+
+sudo apt-get install -y clang libpq-dev libssl-dev pkg-config
+
+cargo build
+
+  export GRAPH_ALLOW_NON_DETERMINISTIC_IPFS=true && cargo run -p graph-node --release -- \
+  --postgres-url postgresql://aced:123@localhost:5432/graph-node4 \
+  --ethereum-rpc mainnet:http://18.142.163.32/ \
+  --ipfs 127.0.0.1:5001
+
+
+-----------------
+gsutils
+-----------------
+sudo apt-get update
+sudo apt-get install gsutil
+
+gsutil cp gs://ens-files/preimages/* .
+
+
+export GRAPH_ALLOW_NON_DETERMINISTIC_IPFS=true && cat preimages-* | cargo run -p graph-node --release -- \
+  --postgres-url postgresql://aced:123@localhost:5432/graph-node4 \
+  --ethereum-rpc mainnet:http://18.142.163.32/ \
+  --ipfs 127.0.0.1:5001 | gzip > data.sql
+
+export GRAPH_ALLOW_NON_DETERMINISTIC_IPFS=true && cargo run -p graph-node --release -- \
+  --postgres-url postgresql://aced:123@localhost:5432/graph-node4 \
+  --ethereum-rpc mainnet:http://18.142.163.32/ \
+  --ipfs 127.0.0.1:5001
+
+git https://github.com/graphprotocol/graph-node
+cd graph-node
+cargo build
+
+ipfs init --profile=lowpower
+
+
+pgEBTURhXV8cVNpPMQ0
+sudo apt-get remove --purge postgresql*
+sudo apt-get install postgresql postgresql-contrib
+
+
+
+
+
+
+------------
+anstest
+----------------
+yarn
+yarn codegen
+yarn build
+yarn create-local
+yarn deploy-local
+
+
+
+
+
+
+-------------------------------------------------------------
+nvm install
+---------------------------------------------------------------
+
+sudo apt install curl
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+source ~/.profile 
+
+nvm install 16
+nvm install 18
+
+------------
+endurance
+--------------
+https://rpc-endurance.fusionist.io
+http://18.142.163.32/
+
+
+-----------
+contract
+----------
+address ANSRegistry (tx:0x29B020DA341C253573323085E94711084019FCf4)...
+address OwnedResolver (tx:0x3eADA6b063c616fCEE1a4DF5b297745a1d61dD3F)...
+address BaseRegistrar (tx:0xF7E323659c4C432900218BD4b89Ba49361DdEa08)...
+Metadata address: 0xd715F755C36168a79323f6f301a6c83C3B26084C
+Wrapper address: 0x4a60c33bF009204Df62A4f8d5d3Af5B66514f8Ec
+address PublicResolver (tx:0x03fc771ae12b89e1E3e648FDCb27C1724048A2e4)...
+address oracle [StablePriceOracle] (tx:0x49030D8B34f6F09efc827C30A69F428bFDF5580C)...
+address ANSRegistrarController (tx:0x5e6ead6A9a4Dd0489858F8Cd71483b32f7dd80C4)...
+address BaseRegistrar (set controller..
+address BulkRenewal (tx:0x2770dD1448d8ec27b7D314023a9597020a46B242)...
+address HashRegistrar (tx:0x2331019ABCC522A050f5eEb87182DE6d0c3024Cd)...
+
